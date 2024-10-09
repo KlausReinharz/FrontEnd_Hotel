@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgZorroAntdModule } from './DemoNgZorroAntdModule';
 import { RegisterComponent } from './auth/components/register/register.component';
+import { LoginComponent } from './auth/components/login/login.component';
 
 
 
@@ -20,7 +21,8 @@ registerLocaleData(en);
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
