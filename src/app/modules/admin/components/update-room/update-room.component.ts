@@ -25,11 +25,27 @@ export class UpdateRoomComponent {
       name:['',Validators.required],
       type:['',Validators.required],
       price:['',Validators.required]
-    })
+    });
+    this.getRoomById();
   }
 
   submitForm(){
+    this.adminService.updateRoomDetails(this.id,this.updateRoomForm.value).subscribe(res=>{
+       this.message.success('Room Updated Succesfully',{nzDuration:5000});
+       this.router.navigateByUrl("/admin/dashboard");
+    },error=>{
+      this.message.error(`${error.error}`,{nzDuration:5000});
+  
+    })
     
+  }
+
+  getRoomById(){
+    this.adminService.getRoomById(this.id).subscribe(res=>{
+        this.updateRoomForm.patchValue(res);
+    }, error =>{
+      this.message.error(`${error.error}`,{nzDuration:5000})
+    })
   }
 
 }

@@ -22,8 +22,22 @@ export class AdminService {
     return this.http.get(BASIC_URL + `api/admin/rooms/${pageNumber}`,{
       headers: this.createAuthorizationHeader(),
     })
-
   }
+
+  /*Necisto esto para atraer los datos para el update */
+  getRoomById(id:number):Observable<any>{
+    return this.http.get(BASIC_URL + `api/admin/room/${id}`,{
+      headers: this.createAuthorizationHeader(),
+    });
+  }
+  /*El update */
+  updateRoomDetails(id:number, roomDto:any):Observable<any>{
+    return this.http.put(BASIC_URL + `api/admin/room/${id}`, roomDto,{
+      headers: this.createAuthorizationHeader(),
+    })
+  }
+
+
 
 
 
