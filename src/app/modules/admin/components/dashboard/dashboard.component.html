@@ -28,9 +28,8 @@
             </ng-template>
 
             <ng-template #actionDelete>
-              <span nz-icon nzType="delete" [nzTheme]="'twotone'" class="icon" [nzTwotoneColor]="'#FF0000'">
-
-              </span>
+              <span nz-icon nzType="delete" [nzTheme]="'twotone'" class="icon" [nzTwotoneColor]="'#FF0000'"
+                  (click)="showConfirm(room.id)"></span>
             </ng-template>
         </div>
     </div>
@@ -38,7 +37,5 @@
     <div class="pagination">
       <nz-pagination [nzPageIndex]="currentPage" [nzTotal]="total" [nzPageSize]="1"
       (nzPageIndexChange)="pageIndexChange($event)"></nz-pagination>
-
     </div>
-
 </div>
