@@ -5,7 +5,7 @@ import { CustomerRoutingModule } from './customer-routing.module';
 import { CustomerComponent } from './customer.component';
 import { RoomsComponent } from './components/rooms/rooms.component';
 import { NgZorroAntdModule } from 'src/app/DemoNgZorroAntdModule';
-import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {  FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,7 +18,7 @@ import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     CustomerRoutingModule,
     NgZorroAntdModule,
-    ReactiveFormsModule,
+
 
   ]
 })

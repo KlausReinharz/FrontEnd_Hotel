@@ -20,9 +20,7 @@ export class RoomsComponent {
 
   constructor(
     private customerService: CustomerService,
-    private message: NzMessageService,
-    private modalService: NzModalService
-  ){
+    private message: NzMessageService  ){
     this.getRooms();
   }
 
@@ -30,7 +28,6 @@ export class RoomsComponent {
     this.customerService.getRooms(this.currentPage-1).subscribe(res=>{
       console.log(res);
       this.rooms = res.roomDtoList;
-
       this.total = res.totalPages * 1;
     })
   }
