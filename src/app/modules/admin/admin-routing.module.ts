@@ -7,7 +7,7 @@ import { UpdateRoomComponent } from './components/update-room/update-room.compon
 import { ReservationsComponent } from './components/reservations/reservations.component';
 
 const routes: Routes = [
-  { path: '', component: AdminComponent },
+  {path: '', component: AdminComponent },
   {path:'dashboard', component:DashboardComponent},
   {path:'room', component:PostRoomComponent},
   {path:'room/:id/edit', component:UpdateRoomComponent},
